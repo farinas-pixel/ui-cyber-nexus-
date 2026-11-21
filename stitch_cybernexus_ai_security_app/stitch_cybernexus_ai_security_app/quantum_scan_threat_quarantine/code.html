@@ -1,0 +1,259 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-container": "#a078ff", "on-secondary-fixed-variant": "#004e5f", "on-primary-fixed": "#001d36", "primary-container": "#3d95e5", "secondary-fixed": "#b3ebff", "error-container": "#93000a", "on-secondary-container": "#005264", "surface-container-low": "#151c27", "primary": "#9ecaff", "surface-dim": "#0d141f", "on-tertiary-container": "#340080", "outline": "#8a919c", "on-surface": "#dce2f3", "on-background": "#dce2f3", "tertiary-fixed-dim": "#d0bcff", "on-secondary": "#003642", "on-tertiary": "#3c0091", "on-secondary-fixed": "#001f27", "on-surface-variant": "#c0c7d3", "inverse-primary": "#0061a3", "primary-fixed": "#d1e4ff", "surface-container-lowest": "#080e19", "tertiary": "#d0bcff", "surface-container": "#19202c", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#5516be", "inverse-on-surface": "#2a313d", "secondary-container": "#00ccf5", "on-primary-container": "#002b4d", "on-primary-fixed-variant": "#00497c", "surface-container-highest": "#2e3541", "surface-bright": "#333946", "on-error": "#690005", "tertiary-fixed": "#e9ddff", "on-primary": "#003258", "error": "#ffb4ab", "surface-variant": "#2e3541", "primary-fixed-dim": "#9ecaff", "on-tertiary-fixed": "#23005c", "surface-tint": "#9ecaff", "outline-variant": "#404751", "surface": "#0d141f", "surface-container-high": "#242a36", "background": "#0d141f", "secondary-fixed-dim": "#37d7ff", "secondary": "#8ee3ff", "inverse-surface": "#dce2f3" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "gutter": "1rem", "space-sm": "0.5rem" }, fontFamily: { "body-lg": ["Geist"], "headline-xl-mobile": ["Space Grotesk"], "body-sm": ["Geist"], "body-md": ["Geist"], "label-lg": ["Space Mono"], "label-sm": ["Space Mono"], "headline-xl": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "label-md": ["Space Mono"], "headline-md": ["Space Grotesk"] }, fontSize: { "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "0.01em", fontWeight: "400" }], "headline-xl-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.06em", fontWeight: "700" }], "label-sm": ["9px", { lineHeight: "12px", letterSpacing: "0.12em", fontWeight: "700" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "400" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;background-color:#0d141f;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen relative selection:bg-secondary-container selection:text-on-secondary-container"><div class="fixed inset-0 pointer-events-none z-0 opacity-40 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-container/20 via-surface-container-lowest/0 to-transparent"></div><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] pt-safe"><div class="px-margin-mobile pt-space-xs pb-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-secondary font-bold">5G</span><span class="material-symbols-outlined text-[13px] text-secondary">network_cell</span><span class="text-[11px] text-outline-variant font-mono">//</span><span class="flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container/10 text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Q-ENC ACTIVE</span></div><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="text-secondary font-bold font-label-sm text-label-sm">98%</span><span class="material-symbols-outlined text-[15px] text-secondary">battery_charging_full</span></div></div><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="CyberNexus AI Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6a4H4M1SnLBeeH_cI7CmE9FZQmBlJjIjIPHxRqljRTgrZZwJZKxKnCGZwrdPnzrlvhiTSwOpnkHdG1922buiMVRxdkPkTdZb5y1QTQbRcLT1kpAw5wel7pa4tEHCNWh4xcp-JMgQ_D2KLOADUy6qjxMQXFX9aL-XkT5tiY_JjKI-6E6RwafGP9ExHcdBgpmy4U0S7L_e9NHZjVNjgXPn9U7pJQyH78WxIKOfqiC8"><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">CyberNexus AI</span><span class="px-space-xs py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-bold uppercase">DEFCON 1 // SECURE</span></div><h1 class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface truncate">Quantum Scan &amp; Threat Quarantine</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><button class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-secondary transition-colors"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin-mobile pt-20 pb-space-xl bg-surface z-10"><div class="flex flex-col w-full gap-space-md">
+<!-- Scan Status & Radar Progress Hero -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl">
+<!-- Ambient Holographic Glows -->
+<div class="absolute -top-12 -left-12 w-44 h-44 rounded-full bg-secondary-container/15 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-tertiary-container/15 blur-3xl pointer-events-none"></div>
+<!-- Top Telemetry Status Line -->
+<div class="flex items-center justify-between gap-space-xs pb-space-sm">
+<div class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-full bg-secondary-container/10">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">HUD REAL-TIME RADAR</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider font-mono">Q-CYC: 0x884F</span>
+</div>
+<!-- Central Concentric Scanner Graphic & Shield Visual -->
+<div class="relative flex flex-col items-center justify-center my-space-xs py-space-sm">
+<!-- 3D Glass Shield Hologram Visual -->
+<div class="relative w-44 h-44 flex items-center justify-center"><div class="absolute inset-0 rounded-full border border-secondary/20 animate-ping opacity-25 pointer-events-none"></div><div class="absolute -inset-2 rounded-full border border-primary/20 animate-pulse pointer-events-none"></div><svg class="absolute inset-0 w-full h-full animate-[spin_18s_linear_infinite]" viewBox="0 0 160 160"><circle class="text-secondary/20" cx="80" cy="80" fill="none" r="76" stroke="currentColor" stroke-dasharray="4 6" stroke-width="1"></circle><circle class="text-primary/25" cx="80" cy="80" fill="none" r="64" stroke="currentColor" stroke-width="1"></circle><circle class="text-secondary/40" cx="80" cy="80" fill="none" r="50" stroke="currentColor" stroke-dasharray="12 18" stroke-width="1.5"></circle><circle class="text-tertiary/30" cx="80" cy="80" fill="none" r="34" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1"></circle><line class="text-secondary" stroke="currentColor" stroke-width="1.5" x1="80" x2="80" y1="4" y2="24"></line><line class="text-secondary" stroke="currentColor" stroke-width="1.5" x1="80" x2="80" y1="136" y2="156"></line><line class="text-secondary" stroke="currentColor" stroke-width="1.5" x1="4" x2="24" y1="80" y2="80"></line><line class="text-secondary" stroke="currentColor" stroke-width="1.5" x1="136" x2="156" y1="80" y2="80"></line></svg><div class="absolute inset-1 rounded-full pointer-events-none overflow-hidden"><div class="w-full h-full bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,rgba(0,204,245,0.35)_360deg)] animate-[spin_3.5s_linear_infinite]"></div></div><div class="absolute top-6 right-8 w-2 h-2 rounded-full bg-secondary shadow-lg shadow-secondary/50 animate-ping pointer-events-none"></div><div class="relative z-10 w-28 h-28 rounded-xl bg-surface-container/70 backdrop-blur-md p-1 shadow-lg flex items-center justify-center"><img class="w-full h-full object-cover rounded-lg" data-alt="A glowing crystalline 3D cybersecurity shield floating in deep space, encased in high-tech obsidian graphite armor with electric cyan neon circuit tracks and holographic lattice HUD rings, reflecting translucent deep azure glass textures, ultra realistic render 8k" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkiwdEv1p_Cp7FvuNhxVlPyCvkrx5pq33GGkG1g2USutVkPB1ZMobFFHRBei8sKc1dAzwrwexp9U1gqufRSLNjBQiutRDmWvx302W7ofy1bKEC2ypwG0EJ9pOegw3JR3SwWGtegZC1_XVcagvz_bSh34Lw2ZXnzOgR5ITqKUGyJkm337kamQJ2zlfzMMQ_KNcv3u6FFt2dRCY6ziEw4BkkkGG1TNiJ0WVgZeA6nuU"><div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-secondary/10 rounded-xl pointer-events-none"></div><span class="absolute bottom-1 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/90 font-label-sm text-label-sm text-secondary font-bold tracking-tight animate-pulse flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>ACTIVE</span></div></div>
+<!-- Percentage Counter & Status -->
+<div class="flex flex-col items-center mt-space-sm text-center">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-secondary font-bold tracking-tighter" id="scan-progress-num">99.4</span>
+<span class="font-headline-md text-headline-md text-secondary font-semibold">%</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface uppercase tracking-widest mt-0.5">
+          QUANTUM DEEP SCAN ACTIVE
+        </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Scanning <span class="text-primary font-mono font-medium">8,192</span> Lattice Nodes • <span class="text-secondary font-mono font-medium">42ms</span> ETA
+        </p>
+</div>
+</div>
+<!-- Mini Telemetry Badges Strip -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-sm pt-space-sm bg-surface-container-lowest/60 rounded-xl p-space-xs">
+<div class="flex flex-col items-center justify-center text-center p-1 rounded-lg bg-surface-container/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">BUFFER</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold mt-0.5">PURGED</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1 rounded-lg bg-surface-container/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">ENTROPY</span>
+<span class="font-label-sm text-label-sm text-primary font-bold mt-0.5">99.8%</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1 rounded-lg bg-surface-container/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">ANOMALIES</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold mt-0.5">2 ISOLATED</span>
+</div>
+</div>
+</section>
+<!-- Active Scan Phase Indicator -->
+<section class="rounded-xl bg-surface-container-low p-space-md shadow-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">checklist</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-bold">LATTICE SCAN PHASES</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">PHASE 03/04</span>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- Phase 1: Completed -->
+<div class="flex items-center justify-between p-space-xs rounded-xl bg-surface-container/50">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-6 h-6 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Kernel Anomaly Check</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">HASH: SHA3-512 VERIFIED</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container/15 text-secondary font-bold">COMPLETED</span>
+</div>
+<!-- Phase 2: Completed -->
+<div class="flex items-center justify-between p-space-xs rounded-xl bg-surface-container/50">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-6 h-6 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Cryptographic Lattice Verification</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">POST-QUANTUM RESISTANT</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container/15 text-secondary font-bold">COMPLETED</span>
+</div>
+<!-- Phase 3: Active In-Progress -->
+<div class="flex flex-col p-space-xs rounded-xl bg-surface-container-high shadow-md border border-primary-container/30"><div class="flex items-center justify-between min-w-0"><div class="flex items-center gap-space-sm min-w-0"><div class="w-6 h-6 rounded-full bg-primary-container/30 flex items-center justify-center text-primary shrink-0 animate-pulse"><span class="material-symbols-outlined text-[15px]">neurology</span></div><div class="flex flex-col min-w-0"><span class="font-body-sm text-body-sm text-on-surface font-semibold truncate">Deep Neural Heuristics</span><span class="font-label-sm text-label-sm text-primary font-mono">INSPECTING RUNTIME PAYLOADS</span></div></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container/25 text-primary font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>78% LIVE</span></div><div class="w-full h-1.5 bg-surface-container-lowest rounded-full mt-2 overflow-hidden relative"><div class="h-full bg-gradient-to-r from-primary-container via-secondary to-secondary-container rounded-full w-[78%] transition-all duration-500 animate-pulse"></div></div></div>
+<!-- Phase 4: Pending -->
+<div class="flex items-center justify-between p-space-xs rounded-xl bg-surface-container/30 opacity-70">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-outline-variant shrink-0">
+<span class="material-symbols-outlined text-[15px]">lock_clock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Autonomous Quarantine &amp; Seal</span>
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">AWAITING HEURISTIC SIGNAL</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-bold">PENDING</span>
+</div>
+</div>
+</section>
+<!-- Quarantined Vectors & Live Detections Section -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-error">security_update_warning</span>
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-bold">QUARANTINED VECTORS (02)</h2>
+</div>
+<button class="font-label-sm text-label-sm text-secondary font-mono flex items-center gap-0.5 hover:text-secondary-fixed transition-colors">
+<span>HISTORY</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<!-- Threat Card 1: Critical -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-lg flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold uppercase flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-on-error-container animate-ping"></span>SEV 1 // CRITICAL</span>
+<span class="font-label-sm text-label-sm text-error font-mono">#VEC-9941</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1 truncate">Polymorphic Lattice Injector</h3>
+</div>
+<div class="w-8 h-8 rounded-full bg-error-container/40 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[20px]">coronavirus</span>
+</div>
+</div>
+<!-- Telemetry Meta Block -->
+<div class="grid grid-cols-2 gap-space-xs p-space-xs rounded-xl bg-surface-container-lowest/70 text-on-surface-variant">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline font-mono">ORIGIN NODE</span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono font-bold truncate">194.26.29.112</span>
+<span class="font-body-sm text-body-sm text-outline truncate">Frankfurt Mirror</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline font-mono">CONTAINMENT STATUS</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono font-bold truncate">Sandbox-09 Sealed</span>
+<span class="font-body-sm text-body-sm text-outline truncate">Air-Gapped Memory</span>
+</div>
+</div>
+<!-- Threat Actions -->
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 py-2 px-space-sm rounded-xl bg-primary-container text-on-primary font-label-sm text-label-sm font-bold uppercase flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-transform" onclick="this.textContent = 'ARTIFACT PURGED ✓'; this.classList.add('opacity-75');">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+<span>PURGE ARTIFACT</span>
+</button>
+<button class="py-2 px-space-sm rounded-xl bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold uppercase flex items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>DUMP</span>
+</button>
+</div>
+</div>
+<!-- Threat Card 2: Suspicious -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-bold uppercase flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>SEV 2 // SUSPICIOUS</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">#VEC-8204</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1 truncate">GhostEntropy DNS Exfil</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-bold uppercase flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>SEV 2 // SUSPICIOUS</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-xl bg-surface-container-lowest/70">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline font-mono">TARGET INGRESS</span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono font-bold">PORT 8443 // TCP</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-1 rounded-full bg-secondary-container/15 text-secondary">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span class="font-label-sm text-label-sm font-mono font-bold">NEXUS AUTONOMY ENFORCED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Tactical Emergency Countermeasures -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs px-1">
+<span class="material-symbols-outlined text-[18px] text-secondary">bolt</span>
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-bold">EMERGENCY COUNTERMEASURES</h2>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Countermeasure 1 -->
+<button class="flex flex-col text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors shadow-md active:scale-95 transition-transform group" onclick="alert('EMERGENCY AIR-GAP DISPATCHED: All virtual TAP devices dropped.')">
+<div class="w-9 h-9 rounded-xl bg-secondary-container/20 flex items-center justify-center text-secondary mb-2 group-hover:bg-secondary-container/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]">arrow_top_left</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">AIR-GAP SYSTEM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">Drop virtual NIC interfaces &amp; socket egress.</span>
+</button>
+<!-- Countermeasure 2 -->
+<button class="flex flex-col text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors shadow-md active:scale-95 transition-transform group" onclick="alert('QUANTUM SEED REGENERATED: Kyber-1024 entropy re-keyed.')">
+<div class="w-9 h-9 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary mb-2 group-hover:bg-tertiary-container/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]">key_visualizer</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase tracking-wider">ROTATE SEED</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">Kyber-1024 post-quantum key re-encryption.</span>
+</button>
+</div>
+</section>
+<!-- Monospace Live Telemetry Log -->
+<section class="rounded-xl bg-surface-container-lowest p-space-md shadow-inner flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">data_object</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-bold">LIVE TELEMETRY STREAM</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span>STREAMING</span>
+</div>
+</div>
+<!-- Terminal Output -->
+<div class="flex flex-col gap-1.5 font-label-sm text-label-sm font-mono pt-1 text-on-surface-variant overflow-x-hidden">
+<div class="flex items-start gap-2">
+<span class="text-secondary shrink-0">14:02:19.401</span>
+<span class="text-tertiary shrink-0">[LATTICE]</span>
+<span class="truncate">Heuristic node #4092 cleared via state-matrix</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-secondary shrink-0">14:02:20.108</span>
+<span class="text-error shrink-0">[DEFENSE]</span>
+<span class="text-error truncate">Sandbox-09 memory write intercept: blocked</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-secondary shrink-0">14:02:20.892</span>
+<span class="text-secondary shrink-0">[SYS-OK]</span>
+<span class="truncate">Entropy sync stable @ 99.8427 bits/sample</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-secondary shrink-0">14:02:21.054</span>
+<span class="text-primary shrink-0">[AUDIT]</span>
+<span class="truncate">Telemetry handshake acknowledged by Nexus AI Core</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Dynamic counter micro-delight
+  const progressEl = document.getElementById('scan-progress-num');
+  if (progressEl) {
+    setInterval(() => {
+      let currentVal = parseFloat(progressEl.innerText);
+      if (currentVal < 99.4) {
+        progressEl.innerText = (currentVal + (Math.random() * 0.4)).toFixed(1);
+      }
+    }, 2800);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_-8px_30px_rgba(0,0,0,0.6)]" data-active-classes="text-secondary bg-surface-container-high/60"><div class="flex justify-around items-center h-20 px-space-sm"><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 rounded-xl text-on-surface-variant hover:text-secondary transition-all" data-path="active-protection" href="#"><span class="material-symbols-outlined text-[22px]">shield</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Shield</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 rounded-xl text-on-surface-variant hover:text-secondary transition-all" data-path="quantum-scan-threat-quarantine" href="#"><span class="material-symbols-outlined text-[22px]">screen_search_desktop</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">HUD Scan</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 rounded-xl text-on-surface-variant hover:text-secondary transition-all" data-path="quantum-ai-core" href="#"><span class="material-symbols-outlined text-[22px]">memory</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Core</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 rounded-xl text-on-surface-variant hover:text-secondary transition-all" data-path="global-threat-intel" href="#"><span class="material-symbols-outlined text-[22px]">radar</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Radar</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 rounded-xl text-on-surface-variant hover:text-secondary transition-all" data-path="nexus-ai-bot" href="#"><span class="material-symbols-outlined text-[22px]">smart_toy</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Nexus</span></a></div></nav>
+
+</body></html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary":"#003642","on-secondary-fixed-variant":"#004e5f","background":"#0d141f","primary-container":"#3d95e5","tertiary-fixed":"#e9ddff","on-secondary-fixed":"#001f27","on-error-container":"#ffdad6","secondary-fixed":"#b3ebff","surface-container-lowest":"#080e19","outline-variant":"#404751","on-surface-variant":"#c0c7d3","on-primary-fixed-variant":"#00497c","on-tertiary":"#3c0091","surface-tint":"#9ecaff","surface-variant":"#2e3541","on-error":"#690005","surface-container-low":"#151c27","surface-container-highest":"#2e3541","on-primary":"#003258","tertiary-container":"#a078ff","surface":"#0d141f","surface-container-high":"#242a36","inverse-on-surface":"#2a313d","tertiary-fixed-dim":"#d0bcff","on-primary-fixed":"#001d36","tertiary":"#d0bcff","error":"#ffb4ab","outline":"#8a919c","on-background":"#dce2f3","on-tertiary-container":"#340080","secondary":"#8ee3ff","inverse-surface":"#dce2f3","on-secondary-container":"#005264","on-surface":"#dce2f3","primary-fixed-dim":"#9ecaff","surface-dim":"#0d141f","error-container":"#93000a","inverse-primary":"#0061a3","surface-container":"#19202c","primary-fixed":"#d1e4ff","secondary-fixed-dim":"#37d7ff","surface-bright":"#333946","primary":"#9ecaff","on-tertiary-fixed-variant":"#5516be","secondary-container":"#00ccf5","on-tertiary-fixed":"#23005c","on-primary-container":"#002b4d"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"1rem","gutter-mobile":"0.75rem",gutter:"1rem","space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem",margin:"1.5rem","space-xl":"2.5rem","space-md":"1rem"},fontFamily:{"headline-md":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-md":["Geist"],"headline-xl-mobile":["Space Grotesk"],"label-lg":["Space Mono"],"body-lg":["Geist"],"headline-lg-mobile":["Space Grotesk"],"body-sm":["Geist"],"label-md":["Space Mono"],"headline-xl":["Space Grotesk"],"label-sm":["Space Mono"]},fontSize:{"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.06em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"400"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.08em",fontWeight:"400"}],"headline-xl":["40px",{lineHeight:"48px",letterSpacing:"-0.03em",fontWeight:"700"}],"label-sm":["9px",{lineHeight:"12px",letterSpacing:"0.12em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm"><img alt="Cinematic 3D render of Nexus AI Shield, an ultra-premium cybersecurity shield emblem made of transparent refractive blue crystal and dark titanium alloy metallic frame, glowing electric cyan neon edges, internal holographic energy core with glowing quantum circuits, hyper-realistic reflections and caustics, soft ambient occlusion, dramatic studio lighting against deep navy dark background #050B16" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCXgzqGkxXAu_5aevvRx0Iqdih-8GYKoWScOHDgWpY7vUVhOKgEEi2x4cQ2VMwsZq6MZLs8j291XCzUx6_pXvPTLdKtTQEKdOrPNS3aF6o8DwgSpAhK0kixGCtnv1FEGeTxduSF_K2ukuO_kWtf7C8a303iZcjVqusIEYT-tqFMdb2Rqvh7-K70hOkdNcTGlzTnoqx7EkmA-qF_XjfWpMCCXGxf409FGV4TX0xPnlRQ"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight leading-none">CYBERNEXUS</span><span class="font-label-sm text-label-sm text-secondary tracking-widest">AI COMMAND SOC</span></div></div><div class="h-2 w-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(142,227,255,0.8)]"></div></div><div class="px-space-md py-space-sm flex items-center justify-between bg-surface-container-lowest/60"><span class="font-label-sm text-label-sm text-outline tracking-wider">SECURE CORE BUS</span><span class="font-label-sm text-label-sm text-secondary-fixed-dim bg-secondary-container/10 px-space-xs rounded">QUANTUM v4.1</span></div><nav class="flex flex-col gap-space-xs px-space-sm py-space-md" data-active-classes="bg-primary-container text-on-primary-container font-headline-md rounded-lg shadow-[0_0_12px_rgba(61,149,229,0.35)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview-command-hud" href="#"><span class="material-symbols-outlined text-base">dashboard</span><span>Overview / Command HUD</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="global-threat-map" href="#"><span class="material-symbols-outlined text-base">public</span><span>Global Threat Map</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="quantum-core-telemetry" href="#"><span class="material-symbols-outlined text-base">memory</span><span>Quantum Core Telemetry</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="forensic-terminal" href="#"><span class="material-symbols-outlined text-base">terminal</span><span>Forensic Terminal</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="key-vault-enclave" href="#"><span class="material-symbols-outlined text-base">shield_lock</span><span>Key Vault &amp; Enclave</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="incident-governance" href="#"><span class="material-symbols-outlined text-base">policy</span><span>Incident Governance</span></a></nav></div><div class="p-space-md bg-surface-container-low/50"><div class="bg-surface-container-lowest/80 p-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline">AUTONOMOUS DEFENSE</span><span class="font-label-sm text-label-sm text-primary">ENGAGED</span></div><div class="w-full bg-surface-container h-1 rounded-full overflow-hidden"><div class="bg-secondary h-full w-[94%] shadow-[0_0_8px_rgba(142,227,255,0.7)]"></div></div><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>QUARANTINE ENCLAVE</span><span>94.8% HEALTH</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/85 backdrop-blur-2xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-error-container/30 px-space-sm py-space-xs rounded"><span class="h-2 w-2 rounded-full bg-error animate-ping"></span><span class="font-label-lg text-label-lg text-error tracking-wider">DEFCON 1</span><span class="font-label-sm text-label-sm text-on-surface-variant">| CRITICAL ALERT</span></div><div class="hidden xl:flex items-center gap-space-md font-label-md text-label-md text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-base">radar</span><span>THREAT INTERCEPTS:</span><span class="font-label-lg text-label-lg text-secondary">14,291/s</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-base">shield</span><span>NEUTRALIZED:</span><span class="font-label-lg text-label-lg text-primary">99.94%</span></div></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex flex-col text-right font-label-md text-label-md"><span class="text-primary tracking-widest">2025-05-18 14:38:09 UTC</span><span class="font-label-sm text-label-sm text-outline">ZULU SYNCHRONIZED</span></div><div class="h-6 w-px bg-surface-variant hidden sm:block"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden md:block"><span class="font-label-md text-label-md text-on-surface font-semibold">ANALYST-904</span><span class="font-label-sm text-label-sm text-on-surface-variant">LEVEL-5 SEC-CLEARANCE</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-Header / Case Context Banner -->
+<div class="px-space-lg py-space-md bg-surface-container-lowest/80 backdrop-blur-xl flex flex-wrap items-center justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm uppercase tracking-widest flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+          SEV-1 CRITICAL
+        </span>
+<span class="font-label-lg text-label-lg text-secondary tracking-wider">#INC-2025-8849</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">SUB-PROTOCOL: ZERO-TRUST LATTICE BREACH</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-space-sm">
+        Multi-Stage Lattice Poisoning &amp; eBPF Rootkit Breach Attempt
+      </h1>
+</div>
+<!-- Right Side Quick Telemetry Pills -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg shadow-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">LEAD AUTONOMOUS AGENT</span>
+<span class="font-label-md text-label-md text-primary font-bold">Sentinel AI Copilot v8.4</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg shadow-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">TRIAGE ELAPSED</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">00:04:18.42</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-space-md py-space-sm rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-all font-label-md text-label-md uppercase tracking-wider font-semibold shadow-md flex items-center gap-1.5 cursor-pointer" id="lockdown-btn">
+<span class="material-symbols-outlined text-[16px]">emergency_home</span>
+          FORCE TOTAL AIR-GAP
+        </button>
+</div>
+</div>
+</div>
+<!-- Operational Canvas -->
+<div class="p-space-lg flex flex-col gap-space-xl">
+<!-- Top Row: Killchain Visual Pipeline Graph -->
+<div class="w-full flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">// STAGE EXECUTION VECTOR</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">KILLCHAIN HEURISTIC CORRELATION</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error"></span> BREACHED</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> INTERCEPTED</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span> DORMANT</span>
+</div>
+</div>
+<!-- Pipeline Cards Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md relative">
+<!-- Stage 1 -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm transition-all group cursor-pointer relative overflow-hidden" onclick="inspectStage(1)">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-bold uppercase tracking-widest">STAGE 01 : INGRESS</span>
+<span class="font-label-sm text-label-sm text-outline">14:34:11 UTC</span>
+</div>
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Spearphish Webhook</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Protocol: TLS 1.3 / mTLS Bypass</div>
+</div>
+<span class="material-symbols-outlined text-error text-[28px]">mark_email_read</span>
+</div>
+<div class="bg-surface-container-lowest/90 p-space-xs rounded-lg font-label-sm text-label-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex justify-between">
+<span class="text-outline">SOURCE IP:</span>
+<span class="text-error font-bold">185.220.101.5</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">TARGET HOOK:</span>
+<span class="text-on-surface truncate">/api/v4/auth/kyber-relay</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">PAYLOAD:</span>
+<span class="text-secondary font-mono">CVE-2025-3910</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-error-container/40 text-error font-label-sm text-label-sm">CONTAINMENT FAILED</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">ATT&amp;CK: T1566.002</span>
+</div>
+</div>
+<!-- Stage 2 -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm transition-all group cursor-pointer relative overflow-hidden" onclick="inspectStage(2)">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-bold uppercase tracking-widest">STAGE 02 : LATERAL</span>
+<span class="font-label-sm text-label-sm text-outline">14:35:02 UTC</span>
+</div>
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Kernel Ring-0 Exploit</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Payload: eBPF JIT Verifier Null-Ptr</div>
+</div>
+<span class="material-symbols-outlined text-error text-[28px]">memory_alt</span>
+</div>
+<div class="bg-surface-container-lowest/90 p-space-xs rounded-lg font-label-sm text-label-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex justify-between">
+<span class="text-outline">TARGET HOST:</span>
+<span class="text-primary font-bold">k8s-worker-alpha-09</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">RING ESCALATION:</span>
+<span class="text-error font-bold">Ring-3 → Ring-0</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">TAINTED DAEMON:</span>
+<span class="text-secondary font-mono">sys-telemetryd</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-error-container/40 text-error font-label-sm text-label-sm">ROOTKIT DETECTED</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">ATT&amp;CK: T1068</span>
+</div>
+</div>
+<!-- Stage 3 -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm transition-all group cursor-pointer relative overflow-hidden ring-2 ring-secondary/40" onclick="inspectStage(3)">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary animate-pulse"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-widest">STAGE 03 : OBJECTIVE</span>
+<span class="font-label-sm text-label-sm text-secondary">ACTIVE TARGET</span>
+</div>
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<div class="font-headline-md text-headline-md text-primary group-hover:text-secondary-fixed transition-colors">Lattice Seed Poisoning</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Post-Quantum ML-KEM Vault #4</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[28px]">token</span>
+</div>
+<div class="bg-surface-container-lowest/90 p-space-xs rounded-lg font-label-sm text-label-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex justify-between">
+<span class="text-outline">HSM CLUSTER:</span>
+<span class="text-primary font-bold">CRYPTO-ENCLAVE-04</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">ENTROPY DEVIATION:</span>
+<span class="text-error font-bold">-38.4% (CRITICAL)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">TARGET ALGO:</span>
+<span class="text-secondary font-mono">Kyber-1024-r3</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm animate-pulse">ISOLATION IN PROGRESS</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">ATT&amp;CK: T1485</span>
+</div>
+</div>
+<!-- Stage 4 -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm transition-all group cursor-pointer relative overflow-hidden" onclick="inspectStage(4)">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-widest">STAGE 04 : IMPACT/EXFIL</span>
+<span class="font-label-sm text-label-sm text-outline">14:38:00 UTC</span>
+</div>
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Exfiltration Intercept</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Autonomous Guard Drop Rate: 100%</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">security</span>
+</div>
+<div class="bg-surface-container-lowest/90 p-space-xs rounded-lg font-label-sm text-label-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex justify-between">
+<span class="text-outline">EGRESS ATTEMPTS:</span>
+<span class="text-on-surface font-bold">148 PACKETS</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">SHRED RATE:</span>
+<span class="text-primary font-bold">100.00% BLOCKED</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">EGRESS DEST:</span>
+<span class="text-error font-mono">94.130.180.11:8443</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-primary/20 text-primary font-label-sm text-label-sm">INTERCEPT SECURED</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">DEFCON STATUS: READY</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Middle Bento: Attack Visualization Visual + Forensics Disassembly & Memory Heuristics -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column (5 cols): AI Copilot Tactical Evaluation & 3D Holographic Visualizer -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Live Neural Copilot Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">psychology</span>
+<span class="font-headline-md text-headline-md text-on-surface">Neural Copilot Assessment</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-primary-container text-on-primary-container rounded uppercase">CONFIDENCE: 98.7%</span>
+</div>
+<div class="flex gap-space-md items-center">
+<img class="w-20 h-20 rounded-xl object-cover bg-surface-container-lowest shrink-0 shadow-md" data-alt="High-tech futuristic humanoid AI copilot avatar with glowing cyan optic sensors, transparent composite armor, and intricate sub-dermal circuits lit by neon blue and purple reflections on a dark obsidian background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI255_kdPN8ooY6uA8B7bw6jlFxKEVjl6sH30rZ6z1OG5IU85hS3bcKUzPxac3NVDSYZwnDbrTW7v5U2o7j-gZNjmtgbF9YEctJksdSB1sNQqoms5NKcVXU_BwX-2z5kph0-k2hXR0LkjL2hGSHu6KtwFOf4V4S_IiuLBgM7YnhkpuNeL4hlLiCX7ZA_YQSx5GKKJyid1bWJYsjUydNIpU2OCQF8MX7KkbghK-l6E"/>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-secondary font-bold">AGENT SENTINEL-9:</span>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                “Attacker deployed an unverified Ring-0 primitive to disrupt post-quantum pseudo-random generation seeds within HSM Node 04. I have enforced memory virtualization fencing. Air-gap readiness at 100%.”
+              </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">ANOMALOUS ENTROPY DELTA</span>
+<span class="font-label-lg text-label-lg text-error font-mono font-bold">-0.003928 bits/B</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">ISOLATED PROCESS ID</span>
+<span class="font-label-lg text-label-lg text-secondary font-mono font-bold">PID: 0x9AF8 [TAINT]</span>
+</div>
+</div>
+</div>
+<!-- Post-Quantum Lattice Topology Visualizer Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">// HSM LATTICE FIELD STATE</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">KYBER-1024 / ROUND-3</span>
+</div>
+<div class="relative w-full h-56 rounded-xl overflow-hidden bg-surface-container-lowest flex items-center justify-center shadow-inner group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-700" data-alt="Futuristic glowing holographic quantum computing lattice core with crystalline concentric rings, electric cyan and ultraviolet particle trajectories, refractive optical elements, high-tech telemetry HUD overlay, dark cyberpunk atmospheric styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-PnQEpNpDju_xyHl_pycKwbNLsxgRxStx_7F8O-1ZXvxAyKzGIRV0jqtvbBx8f5swKdEChlxoCa9Mgr2xkQIkqlAzH1GAPb-cd5M_7eb_HIBYDV6NTbpA_bu00MS7z3YoAN3rMYl_0XU1-aL0j31l9HOrgYc6AX_D7ijVXT3Vg0hfA49fDma2BqMZXmQyXYBvm5uamLSfN9Oo5wIezMB44E-0iN7DSsfhoSctoCE"/>
+<!-- Dynamic Vector Reticle Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/40 pointer-events-none"></div>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-primary font-bold">NODE 04 CRYPTO-MESH</span>
+<span class="font-label-sm text-label-sm text-outline">ROTATION POLYNOMIAL: DEG 256</span>
+</div>
+<div class="absolute bottom-space-sm right-space-sm flex items-center gap-2 bg-surface-container-lowest/80 px-space-xs py-1 rounded backdrop-blur">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-error font-mono">SEEDS TAINTED: 3/16</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-1">
+<span>COVARIANCE DEVIATION: <strong class="text-on-surface">0.0418</strong></span>
+<span>SHADOW MATRIX: <strong class="text-secondary">ACTIVE</strong></span>
+</div>
+</div>
+</div>
+<!-- Right Column (7 cols): Disassembly Diff, Syscall Heuristics & Live Payload Inspector -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Inspector Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-md flex-1">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">terminal</span>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Forensic Disassembly &amp; Syscall Heuristics</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Target binary: <code class="text-secondary font-mono">/lib/modules/6.8.4/security/libbpf_kyber.ko</code></span>
+</div>
+</div>
+<!-- Inspector Tabs -->
+<div class="flex bg-surface-container-lowest rounded-lg p-0.5">
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm bg-primary-container text-on-primary-container font-bold" id="tab-asm">DISASSEMBLY</button>
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm text-outline hover:text-on-surface" id="tab-syscall">SYSCALL TRACE</button>
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm text-outline hover:text-on-surface" id="tab-hashes">HASH INTEGRITY</button>
+</div>
+</div>
+<!-- Code / Opcode View Pane -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md font-mono text-xs overflow-x-auto shadow-inner flex flex-col gap-2">
+<div class="flex items-center justify-between pb-space-xs text-outline font-label-sm text-label-sm">
+<span>ADDRESS &amp; OPCODES</span>
+<span>ASM DISASSEMBLY / HEURISTIC ANNOTATION</span>
+<span>STATUS</span>
+</div>
+<!-- Line 1: Normal -->
+<div class="flex items-center justify-between hover:bg-surface-container-high/40 p-1 rounded font-mono text-on-surface-variant">
+<span class="text-outline font-mono">0x7FFF94E01000 : 48 89 5C 24 08</span>
+<span class="text-on-surface font-mono">mov    QWORD PTR [rsp+0x8], rbx</span>
+<span class="text-outline font-label-sm text-label-sm">CLEAN</span>
+</div>
+<!-- Line 2: Normal -->
+<div class="flex items-center justify-between hover:bg-surface-container-high/40 p-1 rounded font-mono text-on-surface-variant">
+<span class="text-outline font-mono">0x7FFF94E01005 : 48 89 6C 24 10</span>
+<span class="text-on-surface font-mono">mov    QWORD PTR [rsp+0x10], rbp</span>
+<span class="text-outline font-label-sm text-label-sm">CLEAN</span>
+</div>
+<!-- Line 3: Anomalous Overwrite -->
+<div class="flex items-center justify-between bg-error-container/20 p-1 rounded font-mono text-error">
+<span class="text-error font-mono font-bold">0x7FFF94E0100A : 48 C7 C0 04 00 00 00</span>
+<span class="text-error font-mono font-bold">mov    rax, 0x4  <span class="text-on-surface-variant font-sans text-[11px]">(OVERRIDE: SYS_WRITE → /dev/crypto_entropy)</span></span>
+<span class="bg-error text-on-error px-1 py-0.5 rounded font-label-sm text-label-sm">MUTATED</span>
+</div>
+<!-- Line 4: Hook into Ring 0 -->
+<div class="flex items-center justify-between bg-error-container/20 p-1 rounded font-mono text-error">
+<span class="text-error font-mono font-bold">0x7FFF94E01011 : 0F 05</span>
+<span class="text-error font-mono font-bold">syscall          <span class="text-on-surface-variant font-sans text-[11px]">(INJECTED EXPLOIT PRIMITIVE)</span></span>
+<span class="bg-error text-on-error px-1 py-0.5 rounded font-label-sm text-label-sm">CRITICAL</span>
+</div>
+<!-- Line 5: NOP Sled / EBPF Jump -->
+<div class="flex items-center justify-between hover:bg-surface-container-high/40 p-1 rounded font-mono text-secondary">
+<span class="text-outline font-mono">0x7FFF94E01013 : 90 90 90 90 EB 04</span>
+<span class="text-secondary font-mono">nop sled → jmp short 0x7FFF94E01019</span>
+<span class="text-secondary font-label-sm text-label-sm">OBSERVED</span>
+</div>
+<!-- Line 6: Kyber polynomial coefficient manipulation -->
+<div class="flex items-center justify-between bg-surface-container-high/60 p-1 rounded font-mono text-tertiary">
+<span class="text-outline font-mono">0x7FFF94E01019 : 49 8B 04 24 48 FF</span>
+<span class="text-tertiary font-mono">mov    rax, QWORD PTR [r12]  <span class="text-outline font-sans text-[11px]">(Lattice mod q=3329 seed corrupt)</span></span>
+<span class="text-tertiary font-label-sm text-label-sm">POISON REF</span>
+</div>
+</div>
+<!-- Bottom Telemetry Chips in Pane -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase">SHA3-512 CHECKSUM</span>
+<span class="font-label-sm text-label-sm text-primary font-mono truncate" title="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855">
+                e3b0c44298fc...b855
+              </span>
+<span class="font-label-sm text-label-sm text-error">SIGNATURE MISMATCH</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase">KYBER SESSION KEY</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">
+                kyber-1024-sess-99b3
+              </span>
+<span class="font-label-sm text-label-sm text-error font-bold">REVOCATION MANDATED</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase">SYSCALL ANOMALIES</span>
+<span class="font-label-lg text-label-lg text-on-surface font-mono font-bold">
+                19 / sec
+              </span>
+<span class="font-label-sm text-label-sm text-secondary">EBPF_PROG_LOAD_UNCHECKED</span>
+</div>
+</div>
+<!-- Interactive Diff Slider / Action -->
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">ANALYSIS MODEL: GEMINI CYBER-DEEPDIVE-PRO v3.2</span>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm flex items-center gap-1 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+                EXPORT PCAP &amp; DUMP
+              </button>
+<button class="px-space-sm py-1 rounded bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary transition-all font-label-sm text-label-sm font-bold flex items-center gap-1 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">auto_fix_high</span>
+                AUTO-SYNTHESIZE EBPF FILTER
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Autonomous Countermeasure & Incident Remediation Action Matrix -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">Autonomous Countermeasure &amp; Remediation Matrix</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">POLICY PROFILE: FIPS 203 (ML-KEM) &amp; NIST SP 800-61r2 INCIDENT CONTAINMENT</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline">AUTO-ENFORCEMENT MODE:</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary/15 text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            ACTIVE HYBRID SUPERVISED
+          </span>
+</div>
+</div>
+<!-- Action Tiles Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Action 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-md group hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-error text-[24px]">restart_alt</span>
+<span class="font-label-sm text-label-sm text-outline">ACTION #01</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">Zero-State Node Purge</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Flush L1/L2 CPU caches, wipe corrupted memory pages in Node 04, and re-flash firmware from cold write-once storage.
+            </p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>ESTIMATED DOWNTIME:</span>
+<span class="text-on-surface font-bold">&lt; 380 ms</span>
+</div>
+<button class="w-full py-space-sm rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-all font-label-md text-label-md font-bold uppercase tracking-wider shadow cursor-pointer" onclick="executeAction(this, 'Node Purge Executed')">
+              ARM &amp; PURGE NODE
+            </button>
+</div>
+</div>
+<!-- Action 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-md group hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-[24px]">key_off</span>
+<span class="font-label-sm text-label-sm text-outline">ACTION #02</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">Revoke Kyber Ephemeral Keys</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Invalidate 42 active session keys tied to HSM-04. Force global peer re-negotiation across TLS 1.3 quantum decapsulation channels.
+            </p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>SESSIONS AFFECTED:</span>
+<span class="text-secondary font-bold">42 ACTIVE</span>
+</div>
+<button class="w-full py-space-sm rounded-lg bg-secondary-container/20 text-secondary hover:bg-secondary hover:text-on-secondary transition-all font-label-md text-label-md font-bold uppercase tracking-wider shadow cursor-pointer" onclick="executeAction(this, 'Kyber Keys Revoked')">
+              TRIGGER MASS ROTATION
+            </button>
+</div>
+</div>
+<!-- Action 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-md group hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[24px]">broadcast_on_personal</span>
+<span class="font-label-sm text-label-sm text-outline">ACTION #03</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">Broadcast IOC to Global Mesh</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Distribute zero-day eBPF opcode signatures and tainted payload SHA3 fingerprints across 1,840 distributed edge gateway nodes.
+            </p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>PEER PROPAGATION:</span>
+<span class="text-primary font-bold">1,840 SATELLITES</span>
+</div>
+<button class="w-full py-space-sm rounded-lg bg-primary/20 text-primary hover:bg-primary hover:text-on-primary transition-all font-label-md text-label-md font-bold uppercase tracking-wider shadow cursor-pointer" onclick="executeAction(this, 'IOC Broadcasted to 1,840 Nodes')">
+              DISPATCH IOC SIGNAL
+            </button>
+</div>
+</div>
+<!-- Action 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-md group hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary text-[24px]">assignment</span>
+<span class="font-label-sm text-label-sm text-outline">ACTION #04</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">Generate FIPS / CISA Briefing</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Compile cryptographically attested incident report with immutable audit log trails for regulatory submission and executive review.
+            </p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>COMPLIANCE FORMAT:</span>
+<span class="text-tertiary font-bold">STIX 2.1 / CISA PDF</span>
+</div>
+<button class="w-full py-space-sm rounded-lg bg-tertiary-container/20 text-tertiary hover:bg-tertiary hover:text-on-tertiary transition-all font-label-md text-label-md font-bold uppercase tracking-wider shadow cursor-pointer" onclick="executeAction(this, 'Report Generated')">
+              COMPILE &amp; SIGN BRIEF
+            </button>
+</div>
+</div>
+</div>
+<!-- Action Confirmation Toast Bar (Hidden by default) -->
+<div class="hidden bg-surface-container-highest px-space-md py-space-sm rounded-lg flex items-center justify-between transition-all" id="toast-notify">
+<div class="flex items-center gap-space-sm text-secondary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-text">Instruction executed successfully.</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">TX-HASH: 0x93FA...DE88</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function inspectStage(stageNumber) {
+    const banner = document.getElementById('toast-notify');
+    const bannerText = document.getElementById('toast-text');
+    if (banner && bannerText) {
+      bannerText.innerText = "Inspecting Telemetry for Killchain Stage 0" + stageNumber + " -> Synchronizing eBPF buffers...";
+      banner.classList.remove('hidden');
+      setTimeout(() => {
+        banner.classList.add('hidden');
+      }, 4000);
+    }
+  }
+
+  function executeAction(btn, text) {
+    const originalText = btn.innerText;
+    btn.disabled = true;
+    btn.innerText = "TRANSMITTING...";
+    btn.classList.add('opacity-70');
+    
+    setTimeout(() => {
+      btn.innerText = "CONFIRMED";
+      btn.classList.remove('opacity-70');
+      btn.classList.add('bg-primary', 'text-on-primary');
+      
+      const banner = document.getElementById('toast-notify');
+      const bannerText = document.getElementById('toast-text');
+      if (banner && bannerText) {
+        bannerText.innerText = text + " [AUTH BY ANALYST-904 / LEVEL-5 SEC-CLEARANCE]";
+        banner.classList.remove('hidden');
+      }
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerText = originalText;
+        btn.classList.remove('bg-primary', 'text-on-primary');
+      }, 3500);
+    }, 900);
+  }
+
+  // Air gap lock button handler
+  const lockdownBtn = document.getElementById('lockdown-btn');
+  if (lockdownBtn) {
+    lockdownBtn.addEventListener('click', () => {
+      if (confirm('CONFIRM IMMEDIATE TOTAL AIR-GAP OF HSM NODE 04? All active ML-KEM sessions will terminate.')) {
+        lockdownBtn.innerText = "AIR-GAP ACTIVE";
+        lockdownBtn.classList.remove('bg-error-container', 'text-on-error-container');
+        lockdownBtn.classList.add('bg-error', 'text-on-error');
+        const banner = document.getElementById('toast-notify');
+        const bannerText = document.getElementById('toast-text');
+        if (banner && bannerText) {
+          bannerText.innerText = "HARDWARE ISOLATION CIRCUIT TRIGGERED: Node 04 physical relays open.";
+          banner.classList.remove('hidden');
+        }
+      }
+    });
+  }
+</script></main></div></body></html>

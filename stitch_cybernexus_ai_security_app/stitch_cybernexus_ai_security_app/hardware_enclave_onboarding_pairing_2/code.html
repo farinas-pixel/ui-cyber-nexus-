@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-container": "#a078ff", "on-secondary-fixed-variant": "#004e5f", "on-primary-fixed": "#001d36", "primary-container": "#3d95e5", "secondary-fixed": "#b3ebff", "error-container": "#93000a", "on-secondary-container": "#005264", "surface-container-low": "#151c27", "primary": "#9ecaff", "surface-dim": "#0d141f", "on-tertiary-container": "#340080", "outline": "#8a919c", "on-surface": "#dce2f3", "on-background": "#dce2f3", "tertiary-fixed-dim": "#d0bcff", "on-secondary": "#003642", "on-tertiary": "#3c0091", "on-secondary-fixed": "#001f27", "on-surface-variant": "#c0c7d3", "inverse-primary": "#0061a3", "primary-fixed": "#d1e4ff", "surface-container-lowest": "#080e19", "tertiary": "#d0bcff", "surface-container": "#19202c", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#5516be", "inverse-on-surface": "#2a313d", "secondary-container": "#00ccf5", "on-primary-container": "#002b4d", "on-primary-fixed-variant": "#00497c", "surface-container-highest": "#2e3541", "surface-bright": "#333946", "on-error": "#690005", "tertiary-fixed": "#e9ddff", "on-primary": "#003258", "error": "#ffb4ab", "surface-variant": "#2e3541", "primary-fixed-dim": "#9ecaff", "on-tertiary-fixed": "#23005c", "surface-tint": "#9ecaff", "outline-variant": "#404751", "surface": "#0d141f", "surface-container-high": "#242a36", "background": "#0d141f", "secondary-fixed-dim": "#37d7ff", "secondary": "#8ee3ff", "inverse-surface": "#dce2f3" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "gutter": "1rem", "space-sm": "0.5rem" }, fontFamily: { "body-lg": ["Geist"], "headline-xl-mobile": ["Space Grotesk"], "body-sm": ["Geist"], "body-md": ["Geist"], "label-lg": ["Space Mono"], "label-sm": ["Space Mono"], "headline-xl": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "label-md": ["Space Mono"], "headline-md": ["Space Grotesk"] }, fontSize: { "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "0.01em", fontWeight: "400" }], "headline-xl-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.06em", fontWeight: "700" }], "label-sm": ["9px", { lineHeight: "12px", letterSpacing: "0.12em", fontWeight: "700" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "400" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;background-color:#0d141f;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen relative selection:bg-secondary-container selection:text-on-secondary-container"><div class="fixed inset-0 pointer-events-none z-0 opacity-40 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-container/20 via-surface-container-lowest/0 to-transparent"></div><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] pt-safe"><div class="px-margin-mobile pt-space-xs pb-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-secondary font-bold">5G</span><span class="material-symbols-outlined text-[13px] text-secondary">network_cell</span><span class="text-[11px] text-outline-variant font-mono">//</span><span class="flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container/10 text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Q-ENC ACTIVE</span></div><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="text-secondary font-bold font-label-sm text-label-sm">98%</span><span class="material-symbols-outlined text-[15px] text-secondary">battery_charging_full</span></div></div><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="CyberNexus AI Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6a4H4M1SnLBeeH_cI7CmE9FZQmBlJjIjIPHxRqljRTgrZZwJZKxKnCGZwrdPnzrlvhiTSwOpnkHdG1922buiMVRxdkPkTdZb5y1QTQbRcLT1kpAw5wel7pa4tEHCNWh4xcp-JMgQ_D2KLOADUy6qjxMQXFX9aL-XkT5tiY_JjKI-6E6RwafGP9ExHcdBgpmy4U0S7L_e9NHZjVNjgXPn9U7pJQyH78WxIKOfqiC8"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">CyberNexus AI</span><span class="px-space-xs py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-bold uppercase">DEFCON 1 // SECURE</span></div><h1 class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface truncate">Active Protection</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><button class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-secondary transition-colors"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin-mobile pt-20 pb-space-xl bg-surface z-10"><div class="flex flex-col w-full gap-space-md">
+<!-- Header Cryptographic Banner -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse shadow-[0_0_8px_#8ee3ff]"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">ATTESTATION PROTOCOL // v4.2</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Hardware Enclave Pairing</p>
+</div>
+<div class="px-2.5 py-1 rounded-xl bg-surface-container-high/80 backdrop-blur-md flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold tracking-wider">FIPS-140-3 L4</span>
+</div>
+</div>
+<!-- Progress Pipeline Tracker -->
+<div class="p-space-md rounded-xl bg-surface-container/75 backdrop-blur-xl shadow-lg flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="uppercase tracking-wider">Stage 02 of 03 : Lattice Synthesizer</span>
+<span class="text-secondary font-bold font-mono" id="pipeline-percent-label">84.6% COMPLETE</span>
+</div>
+<!-- Active Multi-Segment Pipeline Visualizer -->
+<div class="grid grid-cols-3 gap-1.5 w-full">
+<div class="h-1.5 rounded-full bg-secondary shadow-[0_0_10px_rgba(142,227,255,0.7)]"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest overflow-hidden relative">
+<div class="h-full bg-gradient-to-r from-secondary via-secondary-container to-primary transition-all duration-700 ease-out shadow-[0_0_8px_#3d95e5]" style="width: 84.6%;"></div>
+</div>
+<div class="h-1.5 rounded-full bg-surface-container-highest/60"></div>
+</div>
+<!-- Pipeline Step Micro-Cards -->
+<div class="grid grid-cols-3 gap-2 pt-1">
+<!-- Step 1 -->
+<div class="flex flex-col gap-0.5 p-2 rounded-lg bg-surface-container-lowest/60">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">Step 01</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Titan M2 Handshake</span>
+<span class="font-label-sm text-label-sm text-secondary/80">100% Attested</span>
+</div>
+<!-- Step 2 (Active) -->
+<div class="flex flex-col gap-0.5 p-2 rounded-lg bg-surface-container-high relative overflow-hidden shadow-inner">
+<div class="absolute top-0 right-0 w-8 h-8 bg-secondary-container/10 rounded-full blur-md pointer-events-none"></div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px] animate-spin text-secondary">sync</span>
+<span class="font-label-sm text-label-sm font-bold uppercase text-secondary">Step 02</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-semibold">Kyber Lattice Key</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Deriving 1024</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col gap-0.5 p-2 rounded-lg bg-surface-container-lowest/40 opacity-70">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">Step 03</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Neural Biometrics</span>
+<span class="font-label-sm text-label-sm text-outline">Awaiting Trigger</span>
+</div>
+</div>
+</div>
+<!-- Hero Cryptographic Attestation Card -->
+<div class="p-space-md rounded-xl bg-surface-container/75 backdrop-blur-xl shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<!-- Ambient Radial Glow Backlight -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-secondary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Crystal Shield Visualizer with Holographic Data Rings -->
+<div class="relative w-full flex flex-col items-center justify-center pt-2">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<!-- SVG Concentric Orbitals -->
+<svg class="absolute inset-0 w-full h-full animate-[spin_24s_linear_infinite] opacity-60 pointer-events-none" viewbox="0 0 180 180">
+<circle class="text-secondary/40" cx="90" cy="90" fill="none" r="82" stroke="currentColor" stroke-dasharray="8 6" stroke-width="1.5"></circle>
+<circle class="text-primary/30" cx="90" cy="90" fill="none" r="74" stroke="currentColor" stroke-dasharray="4 8" stroke-width="1"></circle>
+</svg>
+<svg class="absolute inset-0 w-full h-full animate-[spin_16s_linear_infinite_reverse] opacity-40 pointer-events-none" viewbox="0 0 180 180">
+<circle class="text-tertiary/40" cx="90" cy="90" fill="none" r="66" stroke="currentColor" stroke-dasharray="12 12" stroke-width="1"></circle>
+</svg>
+<!-- 3D Nexus AI Crystal Shield Asset Placeholder -->
+<div class="relative w-36 h-36 rounded-2xl flex items-center justify-center overflow-hidden z-10 shadow-[0_0_28px_rgba(33,212,253,0.3)]">
+<img alt="CyberNexus AI Cryo Shield" class="w-full h-full object-contain filter drop-shadow-[0_8px_20px_rgba(0,180,240,0.45)]" src="https://lh3.googleusercontent.com/aida/ALJJyrCXgzqGkxXAu_5aevvRx0Iqdih-8GYKoWScOHDgWpY7vUVhOKgEEi2x4cQ2VMwsZq6MZLs8j291XCzUx6_pXvPTLdKtTQEKdOrPNS3aF6o8DwgSpAhK0kixGCtnv1FEGeTxduSF_K2ukuO_kWtf7C8a303iZcjVqusIEYT-tqFMdb2Rqvh7-K70hOkdNcTGlzTnoqx7EkmA-qF_XjfWpMCCXGxf409FGV4TX0xPnlRQ"/>
+</div>
+</div>
+<!-- Pulse Status Pill -->
+<div class="mt-3 px-3 py-1 rounded-full bg-secondary-container/15 flex items-center gap-2 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-secondary font-bold">HARDWARE BINDING ACTIVE</span>
+</div>
+</div>
+<!-- Live Entropy Coherence Telemetry Meter -->
+<div class="flex flex-col gap-1.5 p-3 rounded-lg bg-surface-container-low/90">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant flex items-center gap-1 font-mono">
+<span class="material-symbols-outlined text-[14px] text-secondary">grain</span>
+          TRNG PHYSICAL ENTROPY POOL
+        </span>
+<span class="text-secondary font-bold font-mono">0.9998 COHERENCE</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary via-secondary to-secondary-container rounded-full" style="width: 99.4%;"></div>
+</div>
+<div class="flex justify-between items-center font-label-sm text-label-sm text-outline-variant font-mono text-[10px]">
+<span>Thermal Jitter Sensor // Real-time sampling</span>
+<span class="text-on-surface">256-Bit True Quantum Noise</span>
+</div>
+</div>
+<!-- Hardware Fingerprint Details List -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enclave Serial</span>
+<span class="font-label-sm text-label-sm font-mono text-on-surface font-semibold tracking-wider bg-surface-container-highest/80 px-2 py-0.5 rounded">SN-TITAN-M2-8849-KYBER</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chip Unique ID</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-mono text-secondary">0x4A91...BC73</span>
+<button class="text-outline hover:text-secondary p-0.5 transition-colors" onclick="navigator.clipboard &amp;&amp; navigator.clipboard.writeText('0x4A91E882FA9311BC73')" title="Copy UID">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Attestation Root Certificate</span>
+<span class="font-label-sm text-label-sm font-mono text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">lock_reset</span>
+          ECC-P384-ROOT-VALID
+        </span>
+</div>
+</div>
+</div>
+<!-- Post-Quantum Lattice Key Genesis Terminal Box -->
+<div class="p-space-md rounded-xl bg-surface-container/75 backdrop-blur-xl shadow-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">terminal</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold text-[15px]">Lattice Public Key Synthesis</h3>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">KYBER-1024</span>
+</div>
+</div>
+<!-- Stream Console -->
+<div class="w-full rounded-lg bg-surface-container-lowest p-3 flex flex-col gap-1.5 overflow-hidden font-mono shadow-inner text-[11px] leading-relaxed">
+<div class="flex items-center justify-between text-outline-variant font-label-sm text-label-sm pb-1 border-b border-surface-container-highest/40">
+<span>MEM ADDR</span>
+<span>SHAKE-256 STATE STREAM</span>
+</div>
+<div class="text-secondary/90 flex gap-2">
+<span class="text-outline">0x7F28:</span>
+<span class="truncate">D3 11 C8 9F 4A 02 BE 98 A2 44 FA EE 19 CC 70 B3</span>
+</div>
+<div class="text-secondary/90 flex gap-2">
+<span class="text-outline">0x7F2B:</span>
+<span class="truncate text-secondary">4E 8A 19 C2 09 DF 33 A1 90 BC 77 12 00 E4 D1 88</span>
+</div>
+<div class="text-secondary/90 flex gap-2">
+<span class="text-outline">0x7F30:</span>
+<span class="text-primary truncate">SEED DERIVATION COMPLETE // SHAKE-256 OK</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface pt-0.5">
+<span class="text-secondary font-bold">&gt;</span>
+<span class="text-on-surface font-semibold" id="dynamic-log-stream">Synthesizing Module-LWE Polynomial Rings...</span>
+<span class="inline-block w-1.5 h-3.5 bg-secondary animate-pulse ml-0.5"></span>
+</div>
+</div>
+<!-- Cryptographic Badges -->
+<div class="flex flex-wrap items-center gap-1.5 pt-1">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">security</span>
+        NIST Level 5
+      </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">memory</span>
+        Constant-Time Poly
+      </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/15 text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">shield_lock</span>
+        Post-Quantum Safe
+      </span>
+</div>
+</div>
+<!-- Security Assurance Zero-Trust Guardrails Matrix -->
+<div class="p-space-md rounded-xl bg-surface-container/75 backdrop-blur-xl shadow-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold text-[15px]">Enclave Guardrail Telemetry</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono uppercase">ALL SAFE</span>
+</div>
+<div class="grid grid-cols-1 gap-2">
+<!-- Guardrail 1 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-surface-container-low/70">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/15 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Physical Anti-Tamper Mesh</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm font-bold uppercase">ARMED</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-0.5">Active continuous grid voltage. Zero-volt memory dump triggered on laser/probe intrusion.</span>
+</div>
+</div>
+<!-- Guardrail 2 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-surface-container-low/70">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">waves</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Side-Channel DPA Shield</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/15 text-primary font-label-sm text-label-sm font-bold uppercase">OPTIMAL</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-0.5">Randomized clock-jitter masking enabled. Differential Power Leakage: &lt;0.001 dB.</span>
+</div>
+</div>
+<!-- Guardrail 3 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-surface-container-low/70">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">ac_unit</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Cold-Boot RAM Isolation</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold uppercase">SECURE</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-0.5">Direct DMA bus encrypted in-flight via hardware AES-XTS. No residual thermal state.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Actions & Primary CTA Floating Dock Area -->
+<div class="flex flex-col gap-space-sm pt-2 pb-4">
+<!-- Primary Glowing CTA Trigger -->
+<button class="w-full relative group overflow-hidden rounded-xl bg-primary-container hover:bg-primary transition-all duration-300 py-3.5 px-space-md flex items-center justify-center gap-3 shadow-[0_0_24px_rgba(61,149,229,0.4)] active:scale-[0.98]" id="pairing-cta">
+<div class="absolute inset-0 bg-gradient-to-r from-secondary/0 via-secondary/25 to-secondary/0 -translate-x-full group-hover:translate-x-full duration-1000 transition-transform"></div>
+<span class="material-symbols-outlined text-on-primary-container text-[24px] animate-pulse">fingerprint</span>
+<span class="font-label-lg text-label-lg font-bold tracking-wider text-on-primary-container uppercase">
+        Commit Lattice Key to Enclave
+      </span>
+</button>
+<!-- Secondary Action Button -->
+<button class="w-full py-2.5 px-4 rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2 text-on-surface-variant hover:text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span class="font-label-md text-label-md tracking-wider uppercase font-semibold">
+        Export Ephemeral Audit Certificate (.PEM)
+      </span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    const streamElement = document.getElementById('dynamic-log-stream');
+    const logs = [
+      'Synthesizing Module-LWE Polynomial Rings...',
+      'Validating Decapsulation Matrix (Kyber-1024)...',
+      'Injecting Ring-LWE noise distribution vectors...',
+      'Entropy pooling thermal seed verified // FIPS 203',
+      'Ready for Hardware Enclave Commit Handshake'
+    ];
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % logs.length;
+      if (streamElement) {
+        streamElement.textContent = logs[index];
+      }
+    }, 2800);
+
+    const ctaButton = document.getElementById('pairing-cta');
+    if (ctaButton) {
+      ctaButton.addEventListener('click', function() {
+        const originalContent = this.innerHTML;
+        this.innerHTML = `
+          <span class="material-symbols-outlined text-on-primary-container text-[22px] animate-spin">progress_activity</span>
+          <span class="font-label-lg text-label-lg font-bold tracking-wider text-on-primary-container uppercase">Committing to Titan M2...</span>
+        `;
+        setTimeout(() => {
+          this.innerHTML = `
+            <span class="material-symbols-outlined text-on-primary-container text-[22px]">verified</span>
+            <span class="font-label-lg text-label-lg font-bold tracking-wider text-on-primary-container uppercase">Pairing Ratified // Stage 3 Ready</span>
+          `;
+          const percentLabel = document.getElementById('pipeline-percent-label');
+          if (percentLabel) percentLabel.textContent = '100% ATTESTED';
+        }, 1800);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_-8px_30px_rgba(0,0,0,0.6)]" data-active-classes="text-secondary bg-surface-container-high/60"><div class="flex justify-around items-center h-20 px-space-sm"><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-secondary transition-all" data-path="active-protection" href="#"><span class="material-symbols-outlined text-[22px]">shield</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Shield</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-secondary transition-all" data-path="quantum-ai-core" href="#"><span class="material-symbols-outlined text-[22px]">memory</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Core</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-secondary transition-all" data-path="global-threat-intel" href="#"><span class="material-symbols-outlined text-[22px]">radar</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Radar</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-secondary transition-all" data-path="nexus-ai-bot" href="#"><span class="material-symbols-outlined text-[22px]">smart_toy</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Nexus</span></a></div></nav></body></html>

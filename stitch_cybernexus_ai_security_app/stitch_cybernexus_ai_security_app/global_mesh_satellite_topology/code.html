@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}
+::-webkit-scrollbar{display:none;}
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-radar-sweep {
+  animation: radar-sweep 5s linear infinite;
+  transform-origin: center center;
+}
+@keyframes waveform-bounce {
+  0%, 100% { transform: scaleY(0.2); }
+  50% { transform: scaleY(1); }
+}
+.waveform-bar {
+  transform-origin: bottom;
+  animation: waveform-bounce 1.2s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(208,188,255,0.4)) drop-shadow(0 0 8px rgba(160,120,255,0.3)); }
+  50% { filter: drop-shadow(0 0 6px rgba(208,188,255,0.9)) drop-shadow(0 0 16px rgba(160,120,255,0.7)); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary":"#003642","on-secondary-fixed-variant":"#004e5f","background":"#0d141f","primary-container":"#3d95e5","tertiary-fixed":"#e9ddff","on-secondary-fixed":"#001f27","on-error-container":"#ffdad6","secondary-fixed":"#b3ebff","surface-container-lowest":"#080e19","outline-variant":"#404751","on-surface-variant":"#c0c7d3","on-primary-fixed-variant":"#00497c","on-tertiary":"#3c0091","surface-tint":"#9ecaff","surface-variant":"#2e3541","on-error":"#690005","surface-container-low":"#151c27","surface-container-highest":"#2e3541","on-primary":"#003258","tertiary-container":"#a078ff","surface":"#0d141f","surface-container-high":"#242a36","inverse-on-surface":"#2a313d","tertiary-fixed-dim":"#d0bcff","on-primary-fixed":"#001d36","tertiary":"#d0bcff","error":"#ffb4ab","outline":"#8a919c","on-background":"#dce2f3","on-tertiary-container":"#340080","secondary":"#8ee3ff","inverse-surface":"#dce2f3","on-secondary-container":"#005264","on-surface":"#dce2f3","primary-fixed-dim":"#9ecaff","surface-dim":"#0d141f","error-container":"#93000a","inverse-primary":"#0061a3","surface-container":"#19202c","primary-fixed":"#d1e4ff","secondary-fixed-dim":"#37d7ff","surface-bright":"#333946","primary":"#9ecaff","on-tertiary-fixed-variant":"#5516be","secondary-container":"#00ccf5","on-tertiary-fixed":"#23005c","on-primary-container":"#002b4d"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"1rem","gutter-mobile":"0.75rem",gutter:"1rem","space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem",margin:"1.5rem","space-xl":"2.5rem","space-md":"1rem"},fontFamily:{"headline-md":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-md":["Geist"],"headline-xl-mobile":["Space Grotesk"],"label-lg":["Space Mono"],"body-lg":["Geist"],"headline-lg-mobile":["Space Grotesk"],"body-sm":["Geist"],"label-md":["Space Mono"],"headline-xl":["Space Grotesk"],"label-sm":["Space Mono"]},fontSize:{"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.06em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"400"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.08em",fontWeight:"400"}],"headline-xl":["40px",{lineHeight:"48px",letterSpacing:"-0.03em",fontWeight:"700"}],"label-sm":["9px",{lineHeight:"12px",letterSpacing:"0.12em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm"><div class="h-8 w-8 rounded-lg bg-surface-container-high/80 border border-secondary/30 flex items-center justify-center shadow-[0_0_12px_rgba(142,227,255,0.3)]"><span class="material-symbols-outlined text-secondary text-xl">shield</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight leading-none">CYBERNEXUS</span><span class="font-label-sm text-label-sm text-secondary tracking-widest">AI COMMAND SOC</span></div></div><div class="h-2 w-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(142,227,255,0.8)] animate-pulse"></div></div><div class="px-space-md py-space-sm flex items-center justify-between bg-surface-container-lowest/60"><span class="font-label-sm text-label-sm text-outline tracking-wider">SECURE CORE BUS</span><span class="font-label-sm text-label-sm text-secondary-fixed-dim bg-secondary-container/10 px-space-xs rounded">QUANTUM v4.1</span></div><nav class="flex flex-col gap-space-xs px-space-sm py-space-md" data-active-classes="bg-primary-container text-on-primary-container font-headline-md rounded-lg shadow-[0_0_12px_rgba(61,149,229,0.35)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview-command-hud" href="#"><span>Overview / Command HUD</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="global-threat-map" href="#"><span>Global Threat Map</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="global-mesh-satellite-topology" href="#"><span>Global Mesh &amp; Satellite Topology</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cryptographic-key-lifecycle-hsm-manager" href="#"><span>Key Vault &amp; HSM Manager</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="zero-trust-pam-identity-governance" href="#"><span>Zero-Trust PAM &amp; Identity Governance</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="quantum-core-telemetry" href="#"><span>Quantum Core Telemetry</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="forensic-terminal" href="#"><span>Forensic Terminal</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="incident-governance" href="#"><span>Incident Governance</span></a></nav></div><div class="p-space-md bg-surface-container-low/50"><div class="bg-surface-container-lowest/80 p-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline">AUTONOMOUS DEFENSE</span><span class="font-label-sm text-label-sm text-primary">ENGAGED</span></div><div class="w-full bg-surface-container h-1 rounded-full overflow-hidden"><div class="bg-secondary h-full w-[94%] shadow-[0_0_8px_rgba(142,227,255,0.7)] animate-pulse"></div></div><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>QUARANTINE ENCLAVE</span><span>94.8% HEALTH</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/85 backdrop-blur-2xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-error-container/30 border border-error/30 px-space-sm py-space-xs rounded shadow-[0_0_14px_rgba(255,180,171,0.25)]"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-80"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-error animate-pulse"></span></span><span class="font-label-lg text-label-lg text-error tracking-wider font-bold">DEFCON 1</span><span class="font-label-sm text-label-sm text-on-surface-variant">| CRITICAL ALERT</span></div><div class="hidden xl:flex items-center gap-space-md font-label-md text-label-md text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-base animate-pulse">radar</span><span>THREAT INTERCEPTS:</span><span class="font-label-lg text-label-lg text-secondary">14,291/s</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-base">shield</span><span>NEUTRALIZED:</span><span class="font-label-lg text-label-lg text-primary">99.94%</span></div></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex flex-col text-right font-label-md text-label-md"><span class="text-primary tracking-widest">2025-05-18 14:38:09 UTC</span><span class="font-label-sm text-label-sm text-outline">ZULU SYNCHRONIZED</span></div><div class="h-6 w-px bg-surface-variant hidden sm:block"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden md:block"><span class="font-label-md text-label-md text-on-surface font-semibold">ANALYST-904</span><span class="font-label-sm text-label-sm text-on-surface-variant">LEVEL-5 SEC-CLEARANCE</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_10px_rgba(158,202,255,0.4)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command Sub-Header & Telemetry Ribbon -->
+<div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest/60 backdrop-blur-xl">
+<!-- Breadcrumb & Control Action Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm tracking-widest text-outline">
+<span class="text-primary hover:text-secondary cursor-pointer transition-colors">CYBERNEXUS</span>
+<span>//</span>
+<span>ORBITAL INFRASTRUCTURE</span>
+<span>//</span>
+<span class="text-secondary font-bold">LEO-CONSTELLATION-NEXUS-7</span>
+<span>//</span>
+<span class="text-tertiary">QKD-BUS-v4</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-secondary-container/10 border-0 shadow-[0_0_12px_rgba(33,212,253,0.25)]">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary shadow-[0_0_8px_rgba(142,227,255,0.9)]"></span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-wider">ENTANGLEMENT COHERENCE: 99.992% (STABLE)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant">|</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">lock</span>
+            POST-QUANTUM KYBER-1024 ATTESTED
+          </span>
+</div>
+</div>
+<!-- Action Trigger Buttons -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container-high/80 hover:bg-surface-container-highest text-secondary hover:text-secondary-fixed shadow-[0_0_12px_rgba(33,212,253,0.15)] transition-all" id="btnLaserRealign">
+<span class="material-symbols-outlined text-[16px] text-secondary">satellite_alt</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Force Laser Re-Alignment</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-error-container/30 hover:bg-error-container/60 text-error shadow-[0_0_14px_rgba(255,180,171,0.2)] transition-all" id="btnAirGap">
+<span class="material-symbols-outlined text-[16px] animate-pulse">lock_reset</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Trigger Air-Gap Isolation</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" id="btnExportTele">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Export Telemetry</span>
+</button>
+</div>
+</div>
+<!-- Live Telemetry Status Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-xs py-space-xs px-space-sm rounded bg-surface-container-lowest/80 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">orbit</span>
+<span>ORBITAL NODES:</span>
+<span class="font-bold text-secondary">84 ONLINE</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">compare_arrows</span>
+<span>ISL LASER LINKS:</span>
+<span class="font-bold text-primary">248 ACTIVE</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-sm">hub</span>
+<span>GROUND HUBS:</span>
+<span class="font-bold text-tertiary">16 SYNCED</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">lens_blur</span>
+<span>PHOTON LOSS:</span>
+<span class="font-bold text-on-surface">0.004 dB/km</span>
+</div>
+</div>
+</div>
+<!-- Primary Metrics Ribbon (4 Cards) -->
+<div class="p-space-md grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Throughput -->
+<div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-lg flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 rounded-full bg-secondary/5 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Mesh Throughput</span>
+<span class="material-symbols-outlined text-secondary text-base">speed</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-headline-xl text-headline-xl text-secondary font-bold tracking-tight">184.6</span>
+<span class="font-label-md text-label-md text-secondary-fixed">Tbps</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-space-xs">
+<span class="text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">arrow_upward</span> +12.4% Peak Load
+        </span>
+<span class="text-outline">0 Drops Recorded</span>
+</div>
+<!-- Mini Visual sparkline -->
+<div class="w-full h-1.5 bg-surface-container-highest/60 rounded-full mt-space-sm overflow-hidden flex">
+<div class="h-full bg-secondary shadow-[0_0_8px_rgba(142,227,255,0.7)]" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Metric 2: LEO Crosslinks -->
+<div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-lg flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 rounded-full bg-primary/5 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">LEO Constellation ISL</span>
+<span class="material-symbols-outlined text-primary text-base">leak_add</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">84 <span class="text-outline font-normal">/</span> 84</span>
+<span class="font-label-md text-label-md text-primary-fixed">NODES</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-space-xs">
+<span class="text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> 100% Interlock
+        </span>
+<span class="text-outline">Intersatellite Ring-0</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest/60 rounded-full mt-space-sm overflow-hidden flex">
+<div class="h-full bg-primary shadow-[0_0_8px_rgba(158,202,255,0.7)]" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Metric 3: Quantum QKD Bitrate -->
+<div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-lg flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 rounded-full bg-tertiary/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Quantum QKD Bitrate</span>
+<span class="material-symbols-outlined text-tertiary text-base">scatter_plot</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-headline-xl text-headline-xl text-tertiary font-bold tracking-tight">42.8</span>
+<span class="font-label-md text-label-md text-tertiary-fixed">Mbps</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-space-xs">
+<span class="text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">all_inclusive</span> Bell-State Entangled
+        </span>
+<span class="text-outline">Kyber-1024 Seeds</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest/60 rounded-full mt-space-sm overflow-hidden flex">
+<div class="h-full bg-tertiary shadow-[0_0_8px_rgba(208,188,255,0.7)]" style="width: 74%;"></div>
+</div>
+</div>
+<!-- Metric 4: Orbit Routing Latency -->
+<div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-lg flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 rounded-full bg-secondary-container/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Global Transit Latency</span>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-base">timer</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">18.4</span>
+<span class="font-label-md text-label-md text-secondary">ms</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-space-xs">
+<span class="text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">trending_down</span> -64% vs Terrestrial
+        </span>
+<span class="text-outline">Zero-Jitter Optical</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest/60 rounded-full mt-space-sm overflow-hidden flex">
+<div class="h-full bg-secondary shadow-[0_0_8px_rgba(142,227,255,0.7)]" style="width: 91%;"></div>
+</div>
+</div>
+</div>
+<!-- Tactical Multi-Column Grid -->
+<div class="px-space-md pb-space-md grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- LEFT COLUMN: Node Directory & Orbital Links (3.5 / 12 cols) -->
+<div class="lg:col-span-3 xl:col-span-3 flex flex-col gap-space-sm">
+<div class="p-space-sm bg-surface-container-low/80 backdrop-blur-md rounded-xl shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">cell_tower</span>
+<span class="font-headline-md text-headline-md text-primary tracking-tight">Node Topology</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary-container/20 text-primary">84/84 LIVE</span>
+</div>
+<!-- Filter Segmented Tabs -->
+<div class="grid grid-cols-2 gap-1 p-0.5 bg-surface-container-lowest/80 rounded-lg text-center font-label-sm text-label-sm">
+<button class="py-1 rounded bg-surface-container text-secondary font-bold shadow-sm">ALL (84)</button>
+<button class="py-1 rounded text-on-surface-variant hover:text-on-surface">LEO RING</button>
+<button class="py-1 rounded text-on-surface-variant hover:text-on-surface">SUBSEA</button>
+<button class="py-1 rounded text-on-surface-variant hover:text-on-surface">ENCLAVES</button>
+</div>
+<!-- Search input box -->
+<div class="relative mt-space-xs">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-outline text-sm">search</span>
+<input class="w-full bg-surface-container-lowest/90 text-on-surface text-body-sm font-label-md pl-8 pr-2 py-1.5 rounded focus:ring-1 focus:ring-secondary focus:outline-none" placeholder="FILTER NODES, CABLES, HUBS..." type="text"/>
+</div>
+<!-- Node Stack List -->
+<div class="flex flex-col gap-space-xs max-h-[620px] overflow-y-auto pr-1">
+<!-- Node 1: NEXUS-SAT-LEO-01 -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 hover:bg-surface-container-highest/80 cursor-pointer transition-all shadow-sm group">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_rgba(142,227,255,0.8)]"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-secondary transition-colors">NEXUS-SAT-LEO-01</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-secondary">OPTIMAL</span>
+</div>
+<div class="grid grid-cols-2 gap-y-0.5 text-on-surface-variant font-label-sm text-label-sm">
+<span>Alt: <strong class="text-on-surface">540.2 km</strong></span>
+<span>Inc: <strong class="text-on-surface">53.0° Polar</strong></span>
+<span>ISL Link: <strong class="text-primary">100 Gbps</strong></span>
+<span>QKD Freq: <strong class="text-tertiary">1550 nm</strong></span>
+</div>
+<div class="mt-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Bell Fidelity: 99.98%</span>
+<span class="text-secondary">ALICE KEY-BUS</span>
+</div>
+</div>
+<!-- Node 2: NEXUS-SAT-LEO-14 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low/90 hover:bg-surface-container-high/70 cursor-pointer transition-all shadow-sm group">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_rgba(142,227,255,0.8)]"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-secondary transition-colors">NEXUS-SAT-LEO-14</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-secondary">ACTIVE</span>
+</div>
+<div class="grid grid-cols-2 gap-y-0.5 text-on-surface-variant font-label-sm text-label-sm">
+<span>Alt: <strong class="text-on-surface">542.8 km</strong></span>
+<span>Orbit: <strong class="text-on-surface">Sun-Sync</strong></span>
+<span>Crosslink: <strong class="text-primary">SAT-15/16</strong></span>
+<span>Drift: <strong class="text-on-surface">0.001 μrad</strong></span>
+</div>
+<div class="mt-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Pointing SNR: 32.4 dB</span>
+<span class="text-primary">ROUTING RING-0</span>
+</div>
+</div>
+<!-- Node 3: ATLANTIC-SUB-FIBER-04 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low/90 hover:bg-surface-container-high/70 cursor-pointer transition-all shadow-sm group">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_rgba(158,202,255,0.8)]"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary transition-colors">ATLANTIC-SUB-04</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary-container/20 text-primary">TRANS-OCEANIC</span>
+</div>
+<div class="grid grid-cols-2 gap-y-0.5 text-on-surface-variant font-label-sm text-label-sm">
+<span>Route: <strong class="text-on-surface">LDN ⇄ NYC</strong></span>
+<span>Latency: <strong class="text-secondary">28.2 ms</strong></span>
+<span>Type: <strong class="text-on-surface">DWDM Fiber</strong></span>
+<span>Security: <strong class="text-tertiary">QKD Hybrid</strong></span>
+</div>
+<div class="mt-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Capacity: 48.0 Tbps</span>
+<span class="text-outline">REDUNDANT DUAL</span>
+</div>
+</div>
+<!-- Node 4: PACIFIC-ORBIT-RELAY-09 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low/90 hover:bg-surface-container-high/70 cursor-pointer transition-all shadow-sm group">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_rgba(142,227,255,0.8)]"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-secondary transition-colors">PACIFIC-RELAY-09</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-secondary">FEEDER-LOCKED</span>
+</div>
+<div class="grid grid-cols-2 gap-y-0.5 text-on-surface-variant font-label-sm text-label-sm">
+<span>Target: <strong class="text-on-surface">Tokyo Enclave</strong></span>
+<span>Fade Comp: <strong class="text-secondary">ENGAGED</strong></span>
+<span>Optical SNR: <strong class="text-on-surface">24.8 dB</strong></span>
+<span>Elevation: <strong class="text-on-surface">48.2°</strong></span>
+</div>
+<div class="mt-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Rain Attenuation: 0.8 dB</span>
+<span class="text-secondary">ADAPTIVE BEAM</span>
+</div>
+</div>
+<!-- Node 5: GENEVA-CERN-QKD-HUB -->
+<div class="p-space-sm rounded-lg bg-surface-container-low/90 hover:bg-surface-container-high/70 cursor-pointer transition-all shadow-sm group">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_6px_rgba(208,188,255,0.8)]"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-tertiary transition-colors">GENEVA-CERN-HUB</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary">GROUND HUB</span>
+</div>
+<div class="grid grid-cols-2 gap-y-0.5 text-on-surface-variant font-label-sm text-label-sm">
+<span>Entangle: <strong class="text-tertiary">Alice-Bob OK</strong></span>
+<span>Sync Clock: <strong class="text-on-surface">Rubidium-87</strong></span>
+<span>Downlink: <strong class="text-secondary">Laser 10Gbps</strong></span>
+<span>Error QBER: <strong class="text-secondary">0.0018%</strong></span>
+</div>
+<div class="mt-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Cryo Temp: 14 mK</span>
+<span class="text-tertiary font-bold">POST-QUANTUM ATTESTED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTER COLUMN: Quantum Orbital Globe & Interconnect Matrix (6 / 12 cols) -->
+<div class="lg:col-span-6 xl:col-span-6 flex flex-col gap-space-md">
+<!-- Main Tactical Holographic Globe Display -->
+<div class="p-space-md rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+<!-- Corner Tech Decors -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-bold tracking-widest z-20">
+<span class="material-symbols-outlined text-sm">public</span>
+<span>ORBITAL MESH RADAR PROJECTION // 3D-GEODESIC</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-2 font-label-sm text-label-sm text-outline z-20">
+<span class="text-primary font-bold">LAT: +46.2044° N</span>
+<span>LON: +06.1432° E</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary">FOV: 148°</span>
+</div>
+<!-- Center 3D Orbital Earth Hologram Container -->
+<div class="relative w-full aspect-square max-h-[520px] mx-auto mt-space-md flex items-center justify-center">
+<!-- Radar Sweep Ring & Scope Overlays -->
+<div class="absolute inset-0 rounded-full border border-secondary/20 flex items-center justify-center pointer-events-none">
+<!-- Outer Geodesic Ring -->
+<div class="w-full h-full rounded-full border border-secondary/15 animate-spin" style="animation-duration: 90s;"></div>
+<!-- Secondary Inclination Ellipse -->
+<div class="absolute w-[94%] h-[94%] rounded-full border border-dashed border-primary/20 rotate-45"></div>
+<!-- Laser Tracking Sweep -->
+<div class="absolute inset-0 rounded-full animate-radar-sweep pointer-events-none">
+<div class="w-1/2 h-1/2 origin-bottom-right bg-gradient-to-tr from-secondary/10 via-primary/5 to-transparent rounded-tl-full"></div>
+</div>
+</div>
+<!-- Holographic Earth Visual via Provided Inspiration Token -->
+<div class="relative w-[86%] h-[86%] rounded-full overflow-hidden shadow-[0_0_60px_rgba(33,212,253,0.35)] flex items-center justify-center bg-surface-container-lowest">
+<img class="w-full h-full object-cover mix-blend-screen scale-105" data-alt="Holographic cyan planet Earth illuminated by laser interconnect network lines, orbital trajectory loops, digital telemetry rings, and quantum communication nodes floating against a deep dark navy space background with cyan and AI-violet data particles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe7HOJU7JDKeEOjAU9JhCbKyLetEoszvckwu4NyqVEHBMIr6JN2s2OEzelz_06QU0Lpdj2qxN4wct1qC9TgA7dLFaP493jwxpDNh4k5O-IwTkWMQQmkr9T6HeFWBxqNvjXKF_71s0U5TvHNUlfPbkaqAqYdUOO_r_AEqh1CXRpPMi9u18Ri3ypRHH6v6kW1IDcMXnqLMWdSNM3s1qfPyszi2oQkssFNzPhTFAjGcM"/>
+<!-- Real-time HUD vector markers over the globe -->
+<div class="absolute inset-0 pointer-events-none flex flex-col justify-between p-4">
+<!-- Top Left Node Marker -->
+<div class="flex items-center gap-1.5 self-start bg-surface-container-lowest/80 px-2 py-1 rounded backdrop-blur-md shadow-md">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-secondary">NEXUS-SAT-08 [POLAR PASS]</span>
+</div>
+<!-- Center Laser Link Pulse Indicator -->
+<div class="self-center flex flex-col items-center">
+<div class="px-3 py-1 rounded-full bg-secondary-container/20 backdrop-blur-md text-secondary font-label-sm text-label-sm font-bold shadow-[0_0_15px_rgba(33,212,253,0.4)] flex items-center gap-1">
+<span class="material-symbols-outlined text-xs animate-spin">cyclone</span>
+<span>ISL-BEAM COHERENT: 1550nm</span>
+</div>
+</div>
+<!-- Bottom Right Subsea Ingress Marker -->
+<div class="flex items-center gap-1.5 self-end bg-surface-container-lowest/80 px-2 py-1 rounded backdrop-blur-md shadow-md">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary">ZURICH GROUND HUB // LINK-OK</span>
+</div>
+</div>
+</div>
+<!-- Precision Telemetry Accents Orbiting the Globe -->
+<div class="absolute top-6 left-6 flex flex-col text-left font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low/70 p-2 rounded backdrop-blur-md">
+<span class="text-outline uppercase">Orbital Velocity</span>
+<span class="text-secondary font-bold text-label-lg font-headline-md">7.66 km/s</span>
+<span class="text-outline mt-1">Perigee / Apogee</span>
+<span class="text-on-surface">538 km / 545 km</span>
+</div>
+<div class="absolute bottom-6 right-6 flex flex-col text-right font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low/70 p-2 rounded backdrop-blur-md">
+<span class="text-outline uppercase">Doppler Shift</span>
+<span class="text-primary font-bold text-label-lg font-headline-md">±0.0018%</span>
+<span class="text-outline mt-1">Bell Fidelity |Ψ+⟩</span>
+<span class="text-tertiary font-bold">99.982%</span>
+</div>
+</div>
+<!-- Ground Station Sync Flow Pipeline -->
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/70 p-space-sm rounded-xl">
+<div class="flex items-center justify-between mb-space-xs font-label-sm text-label-sm">
+<span class="text-outline uppercase font-bold tracking-wider">Ground Hub Entangled Ingest Pipeline</span>
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] animate-pulse">sync</span>
+              AUTOMATIC PHASE TRACKING ACTIVE
+            </span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-xs">
+<div class="p-2 rounded bg-surface-container flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-outline">STAGE 01</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Ephemeris Ingest</span>
+<span class="font-label-sm text-label-sm text-primary">GPS/Galileo Locked</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-outline">STAGE 02</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Laser Acquisition</span>
+<span class="font-label-sm text-label-sm text-secondary">0.05 μrad Coarse</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-outline">STAGE 03</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Bell Entangle</span>
+<span class="font-label-sm text-label-sm text-tertiary">Photons Correlated</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-outline">STAGE 04</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Kyber Stream</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">Continuous Key Feed</span>
+</div>
+</div>
+<!-- Dynamic Beam Steering Bar -->
+<div class="mt-space-xs flex items-center justify-between gap-space-sm font-label-sm text-label-sm">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span>ATMOSPHERIC FADE NOISE:</span>
+<div class="flex gap-0.5 items-end h-3">
+<span class="w-1 h-2 bg-secondary rounded-sm"></span>
+<span class="w-1 h-3 bg-secondary rounded-sm"></span>
+<span class="w-1 h-1.5 bg-secondary rounded-sm"></span>
+<span class="w-1 h-2.5 bg-secondary rounded-sm"></span>
+<span class="w-1 h-1 bg-secondary rounded-sm"></span>
+</div>
+</div>
+<span class="text-secondary font-bold">DEFORMABLE MIRROR ADAPTIVE LOCK // ZERO-LOSS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Interlink Sever Matrix & Autonomous Policies (3.5 / 12 cols) -->
+<div class="lg:col-span-3 xl:col-span-3 flex flex-col gap-space-sm">
+<!-- Subsea & Terrestrial Sever Interlock Card -->
+<div class="p-space-sm bg-surface-container-low/80 backdrop-blur-md rounded-xl shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">cable</span>
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">Cable Interlocks</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary px-1.5 py-0.5 rounded bg-surface-container">FAILSAFE</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Trans-Atlantic Link -->
+<div class="p-space-sm rounded-lg bg-surface-container/70 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Trans-Atlantic Cable 01</span>
+<span class="font-label-sm text-label-sm text-secondary">HEALTHY</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 99.9%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Bude ⇄ Halifax</span>
+<span class="text-on-surface">99.99% Optical Uptime</span>
+</div>
+</div>
+<!-- Trans-Pacific Route -->
+<div class="p-space-sm rounded-lg bg-surface-container/70 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Trans-Pacific Route 03</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">REROUTED // LEO</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full shadow-[0_0_8px_rgba(208,188,255,0.8)]" style="width: 100%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="text-on-surface-variant">Seismic fault bypass</span>
+<span class="text-tertiary">Orbital Laser Diversion</span>
+</div>
+</div>
+<!-- Arctic Dark Fiber -->
+<div class="p-space-sm rounded-lg bg-surface-container/70 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Arctic Trans-Polar Fiber</span>
+<span class="font-label-sm text-label-sm text-primary">POST-Q LOCK</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 96%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Svalbard ⇄ Tokyo</span>
+<span class="text-on-surface">36.1 ms Latency</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Autonomous Mesh Routing Policies (Toggles) -->
+<div class="p-space-sm bg-surface-container-low/80 backdrop-blur-md rounded-xl shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-base">tune</span>
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">Mesh Policies</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary px-1.5 py-0.5 rounded bg-tertiary-container/20">AI-HEURISTIC</span>
+</div>
+<div class="flex flex-col gap-space-xs font-label-sm text-label-sm">
+<!-- Policy 1 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="text-on-surface font-bold">Solar Flare Auto-Reroute</span>
+<span class="text-outline">Ionospheric disruption bypass</span>
+</div>
+<button class="w-9 h-5 rounded-full bg-secondary-container p-0.5 flex items-center justify-end shadow-sm">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest"></span>
+</button>
+</div>
+<!-- Policy 2 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="text-on-surface font-bold">Orbital Laser Anti-Jam</span>
+<span class="text-outline">Instant frequency hopped beam</span>
+</div>
+<button class="w-9 h-5 rounded-full bg-secondary-container p-0.5 flex items-center justify-end shadow-sm">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest"></span>
+</button>
+</div>
+<!-- Policy 3 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="text-on-surface font-bold">Strict Kyber-1024 Force</span>
+<span class="text-outline">Drop classical unpadded packets</span>
+</div>
+<button class="w-9 h-5 rounded-full bg-secondary-container p-0.5 flex items-center justify-end shadow-sm">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest"></span>
+</button>
+</div>
+<!-- Policy 4 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="text-on-surface font-bold">Ground Station Failover</span>
+<span class="text-outline">Automated cloud-free node steer</span>
+</div>
+<button class="w-9 h-5 rounded-full bg-secondary-container p-0.5 flex items-center justify-end shadow-sm">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quantum Entanglement Bell State Monitor Card -->
+<div class="p-space-sm bg-surface-container-low/80 backdrop-blur-md rounded-xl shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">hub</span>
+            Bell State Coherence
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface">|Φ+⟩ / |Ψ-⟩</span>
+</div>
+<div class="flex items-end justify-between h-14 pt-2 px-2 bg-surface-container-lowest/80 rounded-lg gap-1">
+<div class="w-full bg-secondary/80 rounded-t h-[92%] shadow-[0_0_6px_rgba(142,227,255,0.4)]"></div>
+<div class="w-full bg-secondary/80 rounded-t h-[96%] shadow-[0_0_6px_rgba(142,227,255,0.4)]"></div>
+<div class="w-full bg-secondary/80 rounded-t h-[99%] shadow-[0_0_6px_rgba(142,227,255,0.4)]"></div>
+<div class="w-full bg-primary/80 rounded-t h-[94%] shadow-[0_0_6px_rgba(158,202,255,0.4)]"></div>
+<div class="w-full bg-tertiary/90 rounded-t h-[100%] shadow-[0_0_8px_rgba(208,188,255,0.6)]"></div>
+<div class="w-full bg-secondary/80 rounded-t h-[98%] shadow-[0_0_6px_rgba(142,227,255,0.4)]"></div>
+<div class="w-full bg-secondary/80 rounded-t h-[95%] shadow-[0_0_6px_rgba(142,227,255,0.4)]"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>QBER Mean: 0.0019%</span>
+<span class="text-tertiary font-bold">STABLE ATTESTATION</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Terminal Log Stream Section -->
+<div class="px-space-md pb-space-md">
+<div class="p-space-sm bg-surface-container-low/90 backdrop-blur-xl rounded-xl shadow-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-lowest/50 px-space-sm py-1 rounded">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base">terminal</span>
+<span class="font-label-lg text-label-lg text-secondary font-bold tracking-wider uppercase">Live Intersatellite Optical &amp; QKD Telemetry Bus</span>
+<span class="font-label-sm text-label-sm text-outline">// CHANNEL: /dev/quantum/qkd_mesh_0</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-secondary font-bold">STREAMING REAL-TIME (50 Hz)</span>
+</div>
+</div>
+<!-- Monospace Log Container -->
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container-lowest rounded-lg font-label-md text-label-md overflow-x-auto max-h-44 overflow-y-auto" id="telemetryLog">
+<div class="flex items-center gap-space-sm hover:bg-surface-container/50 px-1 py-0.5 rounded transition-colors">
+<span class="text-outline font-label-sm">[15:10:02.841]</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container/20 text-primary font-bold text-label-sm">LEO_ACQUISITION</span>
+<span class="text-on-surface font-body-sm">NEXUS-SAT-LEO-08 established optical crosslink with SAT-09 at 100 Gbps. Beam error: 0.0003 mrad.</span>
+</div>
+<div class="flex items-center gap-space-sm hover:bg-surface-container/50 px-1 py-0.5 rounded transition-colors">
+<span class="text-outline font-label-sm">[15:10:14.119]</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-bold text-label-sm">QKD_ENTANGLE</span>
+<span class="text-on-surface font-body-sm">Transmitted 256MB Bell-state pairs to Zurich Enclave Ground Hub with 0.002% QBER. Key entropy verified.</span>
+</div>
+<div class="flex items-center gap-space-sm hover:bg-surface-container/50 px-1 py-0.5 rounded transition-colors">
+<span class="text-outline font-label-sm">[15:10:29.402]</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container/20 text-secondary font-bold text-label-sm">BEAM_STEER</span>
+<span class="text-on-surface font-body-sm">Compensated atmospheric turbulence in Singapore uplink; dynamic deformable mirror locked. SNR +4.2 dB.</span>
+</div>
+<div class="flex items-center gap-space-sm hover:bg-surface-container/50 px-1 py-0.5 rounded transition-colors">
+<span class="text-outline font-label-sm">[15:10:44.890]</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container/20 text-secondary-fixed font-bold text-label-sm">ROUTE_FAILOVER</span>
+<span class="text-on-surface font-body-sm">Subsea fiber cut simulation passed; 14 Tbps traffic seamlessly migrated to LEO constellations in 1.8ms. Zero drop.</span>
+</div>
+<div class="flex items-center gap-space-sm hover:bg-surface-container/50 px-1 py-0.5 rounded transition-colors">
+<span class="text-outline font-label-sm">[15:10:59.004]</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-bold text-label-sm">CRYPTO_ATTEST</span>
+<span class="text-on-surface font-body-sm">Distributed fresh Kyber-1024 session keys across all 84 orbital constellation nodes. Ephemeral ratchets rotated.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive script to simulate real-time laser alignment and log pulses -->
+<script>
+    (function initMeshConsole() {
+      const logContainer = document.getElementById('telemetryLog');
+      const btnLaser = document.getElementById('btnLaserRealign');
+      const btnAirGap = document.getElementById('btnAirGap');
+      const btnExport = document.getElementById('btnExportTele');
+
+      function appendLog(level, tag, message) {
+        if (!logContainer) return;
+        const now = new Date();
+        const timeStr = '[' + now.toTimeString().split(' ')[0] + '.' + String(now.getMilliseconds()).padStart(3, '0') + ']';
+        
+        let tagClass = 'bg-primary-container/20 text-primary';
+        if (level === 'tertiary') tagClass = 'bg-tertiary-container/30 text-tertiary';
+        if (level === 'secondary') tagClass = 'bg-secondary-container/20 text-secondary';
+        if (level === 'error') tagClass = 'bg-error-container/40 text-error';
+
+        const row = document.createElement('div');
+        row.className = 'flex items-center gap-space-sm hover:bg-surface-container/50 px-1 py-0.5 rounded transition-colors';
+        row.innerHTML = `
+          <span class="text-outline font-label-sm">${timeStr}</span>
+          <span class="px-1.5 py-0.5 rounded ${tagClass} font-bold text-label-sm">${tag}</span>
+          <span class="text-on-surface font-body-sm">${message}</span>
+        `;
+        logContainer.prepend(row);
+      }
+
+      if (btnLaser) {
+        btnLaser.addEventListener('click', () => {
+          appendLog('secondary', 'LASER_REALIGN', 'Autonomous gimbal coarse & fine piezo sweep executed across all 248 inter-satellite crosslinks.');
+          btnLaser.classList.add('scale-95');
+          setTimeout(() => btnLaser.classList.remove('scale-95'), 150);
+        });
+      }
+
+      if (btnAirGap) {
+        btnAirGap.addEventListener('click', () => {
+          appendLog('error', 'DEFCON_AIRGAP', 'CRITICAL OVERRIDE: Downlink transponders shuttered for 3 seconds to verify zero photon leaks.');
+          btnAirGap.classList.add('scale-95');
+          setTimeout(() => btnAirGap.classList.remove('scale-95'), 150);
+        });
+      }
+
+      if (btnExport) {
+        btnExport.addEventListener('click', () => {
+          appendLog('primary', 'EXPORT_BUNDLE', 'Telemetry snapshot encrypted using Kyber-1024 HSM and queued to analyst terminal.');
+        });
+      }
+
+      // Auto periodic heartbeats
+      const simulatedEvents = [
+        { level: 'secondary', tag: 'DOPPLER_CORR', msg: 'LEO-03 velocity phase synchronized with Geneve downlink. Drift 0.0004% within tolerances.' },
+        { level: 'tertiary', tag: 'PHOTON_HARVEST', msg: 'Bell-state generator in Cryo Enclave 2 produced 10^8 entangled photon pairs at 99.991% coherence.' },
+        { level: 'primary', tag: 'ATMOS_SCAN', msg: 'Ground station radar detected clear tropospheric window above Mauna Kea; optical throughput boosted to 120 Gbps.' }
+      ];
+
+      let eventIdx = 0;
+      setInterval(() => {
+        const ev = simulatedEvents[eventIdx % simulatedEvents.length];
+        appendLog(ev.level, ev.tag, ev.msg);
+        eventIdx++;
+      }, 7000);
+    })();
+  </script>
+</div></main></div>
+</body></html>
